@@ -29,7 +29,7 @@ source "${CODEGEN_PKG}/kube_codegen.sh"
 #                  instead of the $GOPATH directly. For normal projects this can be dropped.
 
 kube::codegen::gen_helpers \
-    --input-pkg-root k8s.io/sample-apiserver/pkg/apis \
+    --input-pkg-root sample-apiserver/pkg/apis \
     --output-base "$(dirname "${BASH_SOURCE[0]}")/../../.." \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt"
 
@@ -41,8 +41,8 @@ if [[ -n "${API_KNOWN_VIOLATIONS_DIR:-}" ]]; then
 fi
 
 kube::codegen::gen_openapi \
-    --input-pkg-root k8s.io/sample-apiserver/pkg/apis \
-    --output-pkg-root k8s.io/sample-apiserver/pkg/generated \
+    --input-pkg-root sample-apiserver/pkg/apis \
+    --output-pkg-root sample-apiserver/pkg/generated \
     --output-base "$(dirname "${BASH_SOURCE[0]}")/../../.." \
     --report-filename "${report_filename:-"/dev/null"}" \
     ${update_report:+"${update_report}"} \
@@ -51,7 +51,7 @@ kube::codegen::gen_openapi \
 kube::codegen::gen_client \
     --with-watch \
     --with-applyconfig \
-    --input-pkg-root k8s.io/sample-apiserver/pkg/apis \
-    --output-pkg-root k8s.io/sample-apiserver/pkg/generated \
+    --input-pkg-root sample-apiserver/pkg/apis \
+    --output-pkg-root sample-apiserver/pkg/generated \
     --output-base "$(dirname "${BASH_SOURCE[0]}")/../../.." \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt"

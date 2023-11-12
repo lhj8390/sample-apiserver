@@ -83,16 +83,16 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"k8s.io/apimachinery/pkg/runtime.TypeMeta":                       schema_k8sio_apimachinery_pkg_runtime_TypeMeta(ref),
 		"k8s.io/apimachinery/pkg/runtime.Unknown":                        schema_k8sio_apimachinery_pkg_runtime_Unknown(ref),
 		"k8s.io/apimachinery/pkg/version.Info":                           schema_k8sio_apimachinery_pkg_version_Info(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.Fischer":       schema_pkg_apis_wardle_v1alpha1_Fischer(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FischerList":   schema_pkg_apis_wardle_v1alpha1_FischerList(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.Flunder":       schema_pkg_apis_wardle_v1alpha1_Flunder(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderList":   schema_pkg_apis_wardle_v1alpha1_FlunderList(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderSpec":   schema_pkg_apis_wardle_v1alpha1_FlunderSpec(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderStatus": schema_pkg_apis_wardle_v1alpha1_FlunderStatus(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.Flunder":        schema_pkg_apis_wardle_v1beta1_Flunder(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderList":    schema_pkg_apis_wardle_v1beta1_FlunderList(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderSpec":    schema_pkg_apis_wardle_v1beta1_FlunderSpec(ref),
-		"k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderStatus":  schema_pkg_apis_wardle_v1beta1_FlunderStatus(ref),
+		"sample-apiserver/pkg/apis/wardle/v1alpha1.Fischer":              schema_pkg_apis_wardle_v1alpha1_Fischer(ref),
+		"sample-apiserver/pkg/apis/wardle/v1alpha1.FischerList":          schema_pkg_apis_wardle_v1alpha1_FischerList(ref),
+		"sample-apiserver/pkg/apis/wardle/v1alpha1.Flunder":              schema_pkg_apis_wardle_v1alpha1_Flunder(ref),
+		"sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderList":          schema_pkg_apis_wardle_v1alpha1_FlunderList(ref),
+		"sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderSpec":          schema_pkg_apis_wardle_v1alpha1_FlunderSpec(ref),
+		"sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderStatus":        schema_pkg_apis_wardle_v1alpha1_FlunderStatus(ref),
+		"sample-apiserver/pkg/apis/wardle/v1beta1.Flunder":               schema_pkg_apis_wardle_v1beta1_Flunder(ref),
+		"sample-apiserver/pkg/apis/wardle/v1beta1.FlunderList":           schema_pkg_apis_wardle_v1beta1_FlunderList(ref),
+		"sample-apiserver/pkg/apis/wardle/v1beta1.FlunderSpec":           schema_pkg_apis_wardle_v1beta1_FlunderSpec(ref),
+		"sample-apiserver/pkg/apis/wardle/v1beta1.FlunderStatus":         schema_pkg_apis_wardle_v1beta1_FlunderStatus(ref),
 	}
 }
 
@@ -2598,7 +2598,7 @@ func schema_pkg_apis_wardle_v1alpha1_FischerList(ref common.ReferenceCallback) c
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.Fischer"),
+										Ref:     ref("sample-apiserver/pkg/apis/wardle/v1alpha1.Fischer"),
 									},
 								},
 							},
@@ -2609,7 +2609,7 @@ func schema_pkg_apis_wardle_v1alpha1_FischerList(ref common.ReferenceCallback) c
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.Fischer"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "sample-apiserver/pkg/apis/wardle/v1alpha1.Fischer"},
 	}
 }
 
@@ -2642,20 +2642,20 @@ func schema_pkg_apis_wardle_v1alpha1_Flunder(ref common.ReferenceCallback) commo
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderSpec"),
+							Ref:     ref("sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderStatus"),
+							Ref:     ref("sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderSpec", "k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderStatus"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderSpec", "sample-apiserver/pkg/apis/wardle/v1alpha1.FlunderStatus"},
 	}
 }
 
@@ -2693,7 +2693,7 @@ func schema_pkg_apis_wardle_v1alpha1_FlunderList(ref common.ReferenceCallback) c
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.Flunder"),
+										Ref:     ref("sample-apiserver/pkg/apis/wardle/v1alpha1.Flunder"),
 									},
 								},
 							},
@@ -2704,7 +2704,7 @@ func schema_pkg_apis_wardle_v1alpha1_FlunderList(ref common.ReferenceCallback) c
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/sample-apiserver/pkg/apis/wardle/v1alpha1.Flunder"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "sample-apiserver/pkg/apis/wardle/v1alpha1.Flunder"},
 	}
 }
 
@@ -2774,20 +2774,20 @@ func schema_pkg_apis_wardle_v1beta1_Flunder(ref common.ReferenceCallback) common
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderSpec"),
+							Ref:     ref("sample-apiserver/pkg/apis/wardle/v1beta1.FlunderSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderStatus"),
+							Ref:     ref("sample-apiserver/pkg/apis/wardle/v1beta1.FlunderStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderSpec", "k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.FlunderStatus"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta", "sample-apiserver/pkg/apis/wardle/v1beta1.FlunderSpec", "sample-apiserver/pkg/apis/wardle/v1beta1.FlunderStatus"},
 	}
 }
 
@@ -2825,7 +2825,7 @@ func schema_pkg_apis_wardle_v1beta1_FlunderList(ref common.ReferenceCallback) co
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.Flunder"),
+										Ref:     ref("sample-apiserver/pkg/apis/wardle/v1beta1.Flunder"),
 									},
 								},
 							},
@@ -2836,7 +2836,7 @@ func schema_pkg_apis_wardle_v1beta1_FlunderList(ref common.ReferenceCallback) co
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/sample-apiserver/pkg/apis/wardle/v1beta1.Flunder"},
+			"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "sample-apiserver/pkg/apis/wardle/v1beta1.Flunder"},
 	}
 }
 
